@@ -16,6 +16,14 @@
             align-items: center;
             justify-content: center;
             min-height: 100vh;
+
+            background-image: url('pictures/background.jpg'); /* 图片的路径 */
+            background-size: cover; /* 调整图片大小以覆盖整个背景 */
+            background-repeat: no-repeat; /* 防止图片重复 */
+            background-attachment: fixed; /* 固定背景图片，使其不随页面滚动 */
+
+            background-color: #f0f0f0; /* 设置一个背景颜色 */
+            opacity: 0.8; /* 设置透明度为 0.7（70%） */
         }
 
         header {
@@ -55,7 +63,7 @@
         }
 
         .poem p {
-        text-indent: 2em; /* 设置段落的首行缩进为2个字符宽度 */
+        text-indent: 5em; /* 设置段落的首行缩进为2个字符宽度 */
         }
 
         h2 {
@@ -65,7 +73,7 @@
             margin-bottom: 10px;
         }
 
-        p {
+        p1 {
             text-align: left;
             line-height: 1.6;
         }
@@ -74,6 +82,18 @@
             font-size: 0.8em;
             font-family: '幼圆', 'Georgia', serif;
             color: white;
+        }
+
+        .author {
+	    	/* 设置唐▪张若虚的样式 */
+		    font-style: italic;
+		    color: #999; /* 设置颜色为灰色 */
+		    font-size: 16px;
+	    	line-height: 1.6;
+		}
+
+        .indented {
+            text-indent: 1em; /* 设置文本缩进为两个字母 "m" 的宽度 */
         }
     </style>
 </head>
@@ -85,9 +105,10 @@
 
     <div class="poem-container">
         <div class="poem">
-            <h2>春江花月夜</h2>
-            <p>
-                唐▪张若虚<br>
+            <h2 class="indented">春江花月夜</h2>
+            <p id="author">唐▪张若虚</p>
+            <p1>
+
                 春江潮水连海平，海上明月共潮生。 <br>
                 滟滟随波千万里，何处春江无月明。 <br>
                 江流宛转绕芳甸，月照花林皆似霰。 <br>
@@ -106,7 +127,7 @@
                 江水流春去欲尽，江潭落月复西斜。 <br>
                 斜月沉沉藏海雾，碣石潇湘无限路。 <br>
                 不知乘月几人归，落月摇情满江树。 <br>
-            </p>
+            </p1>
         </div>
     </div>
 
