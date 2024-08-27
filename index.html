@@ -1,151 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <style>
-        body {
-            background: linear-gradient(to right, #87CEFA, #00CED1);
-            color: black;
-            font-family: 'Georgia', serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-
-            background-color: #f0f0f0; /* 设置一个背景颜色 */
-            background-image: url('pictures/background.jpg'); /* 图片的路径 */
-            background-size: cover; /* 调整图片大小以覆盖整个背景 */
-            background-repeat: no-repeat; /* 防止图片重复 */
-            background-attachment: fixed; /* 固定背景图片，使其不随页面滚动 */
-            animation: fadeIn 2s ease-in-out forwards; /* 使用动画，持续5秒，淡入淡出效果 */
-
-
-        }
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 0.8;
-            }
-        }
-
-        header {
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            width: 80%;
-            margin-bottom: 20px;
-            display: flex; /* Make header a flex container */
-            align-items: center; /* Center items vertically */
-            justify-content: center; /* Center items horizontally */
-        }
-
-        img {
-            margin-right: 20px;
-            max-width: 100%; /* Make sure the image doesn't exceed its container */
-        }
-
-        h1 {
-            color: #333;
-            margin: 0; /* Remove default margin */
-        }
-
-        .poem-container {
-            display: flex;
-            align-items: center;
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            text-align: left;
-            width: 80%;
-            margin-left: auto; /* Auto margin on the left to move it to the right */
-            margin-right: auto; /* Auto margin on the right for centering */
-        }
-
-        .poem p {
-        text-indent: 5em; /* 设置段落的首行缩进为2个字符宽度 */
-        }
-
-        h2 {
-            color: #333;
-            font-size: 2em;
-            font-family: '仿宋', 'Georgia', serif;
-            margin-bottom: 10px;
-        }
-
-        p1 {
-            text-align: left;
-            line-height: 1.6;
-        }
-
-        .welcome-text {
-            font-size: 0.8em;
-            font-family: '幼圆', 'Georgia', serif;
-            color: white;
-        }
-
-        .author {
-	    	/* 设置唐▪张若虚的样式 */
-		    font-style: italic;
-		    color: #999; /* 设置颜色为灰色 */
-		    font-size: 16px;
-	    	line-height: 1.6;
-		}
-
-        .indented {
-            text-indent: 1em; /* 设置文本缩进为两个字母 "m" 的宽度 */
-        }
-
-        .poem_style{
-            text-indent: 3em;
-        }
-    </style>
+    <title>个人博客</title>
+	<link rel="stylesheet" href="/assets/css/styles.css"> <!-- 复用导航栏和通用样式 -->
+    <link rel="stylesheet" href="assets/css/index-css.css">
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/png">
 </head>
 <body>
-    <header>
-        <img src="pictures/fufu.gif" alt="GIF 图片" width="100" height="100">
-        <h1>Rainspaper Home</h1>
-    </header>
+	<!-- 背景图片占位符 -->
+    <div class="background-placeholder"></div>
 
-    <div class="poem-container">
-        <div class="poem">
-            <h2 class="indented">春江花月夜</h2>
-            <p id="author">唐▪张若虚</p>
-            <p1 class="poem_style">
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <a href="index.html">
+            <img src="assets/images/home-icon.gif" alt="主页" class="nav-icon">主页
+        </a>
+        <a href="posts/post.html">
+            <img src="assets/images/posts-icon.gif" alt="文章" class="nav-icon">文章
+        </a>
+        <a href="about.html">
+            <img src="assets/images/about-icon.gif" alt="关于" class="nav-icon">关于
+        </a>
+    </nav>
 
-                春江潮水连海平，海上明月共潮生。 <br>
-                滟滟随波千万里，何处春江无月明。 <br>
-                江流宛转绕芳甸，月照花林皆似霰。 <br>
-                空里流霜不觉飞，汀上白沙看不见。 <br>
-                江天一色无纤尘，皎皎空中孤月轮。 <br>
-                江畔何人初见月？江月何年初照人？ <br>
-                人生代代无穷已，江月年年望相似。 <br>
-                不知江月待何人，但见长江送流水。 <br>
-                白云一片去悠悠，青枫浦上不胜愁。 <br>
-                谁家今夜扁舟子？何处相思明月楼？ <br>
-                可怜楼上月裴回，应照离人妆镜台。 <br>
-                玉户帘中卷不去，捣衣砧上拂还来。 <br>
-                此时相望不相闻，愿逐月华流照君。 <br>
-                鸿雁长飞光不度，鱼龙潜跃水成文。 <br>
-                昨夜闲潭梦落花，可怜春半不还家。 <br>
-                江水流春去欲尽，江潭落月复西斜。 <br>
-                斜月沉沉藏海雾，碣石潇湘无限路。 <br>
-                不知乘月几人归，落月摇情满江树。 <br>
-            </p1>
+    <!-- 隐藏/显示导航栏按钮 -->
+    <button class="nav-toggle" aria-label="Toggle navigation">
+        <img src="assets/images/menu-icon.png" alt="Menu">
+    </button>
+
+    <!-- 背景区域 -->
+    <div class="hero">
+        <div class="hero-content">
+            <h1>欢迎来到我的博客</h1>
+            <p>探索我的文章和分享</p>
+            <a href="#posts" class="cta-button">查看文章</a>
         </div>
     </div>
 
-    <p class="welcome-text">
-        欢迎你来到 Rainspaper 的家，清风明月与小榆木共勉。
-    </p>
+    <!-- 内容区域 -->
+    <div class="content-section" id="home">
+        <h2>主页</h2>
+        <p>这是主页的内容区域。</p>
+    </div>
+
+    <div class="content-section" id="posts">
+        <h2>文章</h2>
+        <p>这是文章的内容区域。</p>
+        <div class="cards">
+            <div class="card">
+                <h3>文章标题 1</h3>
+                <p>文章内容简介。</p>
+            </div>
+            <div class="card">
+                <h3>文章标题 2</h3>
+                <p>文章内容简介。</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-section" id="about">
+        <h2>关于</h2>
+        <p>这是关于页面的内容区域。</p>
+    </div>
+
+    <!-- 回到顶部按钮 -->
+    <a href="#" class="back-to-top">&#8679;</a>
+
+    <script src="assets/js/scripts.js"></script>
+    <script>
+        // JavaScript 来处理背景图片加载的淡入效果
+        window.addEventListener('load', function() {
+            const body = document.body;
+            const placeholder = document.querySelector('.background-placeholder');
+
+            // 当背景图片加载完成后
+            const img = new Image();
+            img.src = '/assets/images/background-index.png';
+            img.onload = function() {
+                // 背景图片加载完成后，移除占位符
+                placeholder.style.opacity = 0;
+                setTimeout(() => placeholder.style.display = 'none', 600); // 给动画留出时间
+
+                // 显示页面内容
+                body.style.opacity = 1;
+            };
+
+            // 设置初始状态
+            body.style.opacity = 0; // 隐藏页面内容
+        });
+    </script>
+	
 </body>
 </html>
